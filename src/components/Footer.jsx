@@ -99,7 +99,7 @@ const Footer = () => {
         {/* INSTAGRAM NEWS */}
         <div>
           <h3 className="text-yellow-200 font-semibold uppercase">
-            Instagram News
+            Our Photos
           </h3>
           <div className="w-10 h-[2px] bg-yellow-200 my-4"></div>
 
