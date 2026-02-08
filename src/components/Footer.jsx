@@ -1,145 +1,124 @@
-import { Phone, ChevronRight } from "lucide-react";
-import logo from '../assets/logo.png';
+import { ChevronRight } from "lucide-react";
+import logo from "../assets/logo.png";
+
 const Footer = () => {
   return (
-    <footer className="bg-[#1f2326] text-gray-300 pt-14">
-      {/* Top Section */}
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
-        {/* Logo & About */}
+    <footer className="bg-black text-gray-300 py-20">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-14">
+
+        {/* LOGO + ABOUT */}
         <div>
-          <img
-            src={logo} // replace with your logo path
-            alt="Hi-Safe Packers & Movers"
-            className="h-14 mb-4"
-          />
-          <p className="text-sm leading-6">
-            Hi-Safe Packers & Movers, the specialist in Packing & Moving of
-            Household, Office, and Industrial goods anywhere in Erode,
-            Tiruppur, Coimbatore, Namakkal & Salem.
+          <div className="flex items-center gap-3 mb-4">
+            <img src={logo} alt="Ravanan Packers & Movers" className="w-60" />
+            {/* <div>
+              <h2 className="text-white text-xl font-semibold">
+                Ravanan
+              </h2>
+              <p className="text-sm text-gray-400">
+                Packers & Movers
+              </p>
+            </div> */}
+          </div>
+
+          <p className="text-sm leading-6 text-gray-400 max-w-sm">
+            Ravanan Packers & Movers provides safe, reliable and professional
+            packing, moving, transportation and warehousing services across
+            Tamil Nadu.
+          </p>
+
+          {/* Working Hours */}
+          <h3 className="mt-10 text-yellow-200 font-semibold uppercase">
+            Working Hours
+          </h3>
+          <div className="w-10 h-[2px] bg-yellow-200 my-3"></div>
+
+          <p className="text-sm text-gray-300">
+            Mon–Fri ........ 8:00 am – 06:00 pm <br />
+            Sat–Sun ........ 8:00 am – 12:00 pm
           </p>
         </div>
 
-        {/* Services */}
+        {/* OUR SERVICES */}
         <div>
-          <h3 className="text-white text-lg font-semibold mb-4">
+          <h3 className="text-yellow-200 font-semibold uppercase">
             Our Services
           </h3>
-          <ul className="space-y-2 text-sm">
+          <div className="w-10 h-[2px] bg-yellow-200 my-4"></div>
+
+          <ul className="space-y-3 text-sm">
             {[
-              "Bike transportation",
-              "Packing & moving",
-              "Car transportation",
-              "Loading & unloading",
-              "Warehouse services",
-              "Insurance services",
-              "Home shifting",
+              "Bike Transportation",
+              "Car Transportation",
+              "Home Shifting",
+              "Office Shifting",
+              "Packing & Moving",
+              "Warehouse Services",
+              "Loading & Unloading",
+              "Insurance Services",
             ].map((item) => (
-              <li key={item} className="flex items-center gap-2">
-                <ChevronRight size={14} />
+              <li
+                key={item}
+                className="flex items-center gap-2 hover:text-yellow-200 transition cursor-pointer"
+              >
+                <ChevronRight size={14} className="text-yellow-200" />
                 {item}
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Address */}
+        {/* QUICK LINKS */}
         <div>
-          <h3 className="text-white text-lg font-semibold mb-4">Address</h3>
-          <p className="text-sm leading-6 mb-4">
-
-            D/O Thangaraj, 44,
-            <br />
-            Neelampayalam,
-            Kollapanur,
-            <br />
-            Gobichettipalayam,
-            Getticheyur,
-            <br />
-            Erode District, <br />
-            Tamil Nadu – 638110
-
-          </p>
-          <p className="flex items-center gap-2 text-white text-sm">
-            <Phone size={16} />
-            +91 96550 99911
-          </p>
-        </div>
-
-        {/* Service Hours */}
-        <div>
-          <h3 className="text-white text-lg font-semibold mb-4">
-            Service Hours
+          <h3 className="text-yellow-200 font-semibold uppercase">
+            Quick Links
           </h3>
+          <div className="w-10 h-[2px] bg-yellow-200 my-4"></div>
+
           <ul className="space-y-3 text-sm">
             {[
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-            ].map((day) => (
+              "Home",
+              "Branches",
+              "Services",
+              "About Us",
+              "Blog",
+              "Our Works",
+              "Contact Us",
+              "Get Started",
+            ].map((item) => (
               <li
-                key={day}
-                className="flex justify-between border-b border-gray-700 pb-1"
+                key={item}
+                className="flex items-center gap-2 hover:text-yellow-200 transition cursor-pointer"
               >
-                <span>{day}</span>
-                <span>8:00 - 20:30</span>
+                <ChevronRight size={14} className="text-yellow-200" />
+                {item}
               </li>
             ))}
           </ul>
         </div>
-      </div>
 
-      {/* City Wise Links */}
-      <div className="max-w-7xl mx-auto px-6 mt-14">
-        <h3 className="text-white text-lg font-semibold mb-6">
-          City Wise Links:
-        </h3>
+        {/* INSTAGRAM NEWS */}
+        <div>
+          <h3 className="text-yellow-200 font-semibold uppercase">
+            Instagram News
+          </h3>
+          <div className="w-10 h-[2px] bg-yellow-200 my-4"></div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
-          {[
-            [
-              "Packers and Movers in Gobichettipalayam",
-              "Packers and Movers in Kavantha Padi",
-              "Packers and Movers in Nambiyur",
-            ],
-            [
-              "Packers and Movers in Arasur",
-              "Packers and Movers in Bhavani Sathyamangalam",
-              "Packers and Movers in Otthakkuthirai",
-            ],
-            [
-              "Packers and Movers in TN Palayam",
-              "Packers and Movers in Anthiyur",
-              "Packers and Movers in Athani",
-            ],
-          ].map((col, i) => (
-            <ul key={i} className="space-y-2">
-              {col.map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <ChevronRight size={14} />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          ))}
-        </div>
-
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="mt-14 border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between text-sm text-gray-400">
-          <p>©2023 Hi-Safe Packers & Movers. All rights reserved.</p>
-          <div className="flex gap-6 mt-2 md:mt-0">
-            <a href="#" className="hover:text-white">
-              Terms & Conditions
-            </a>
-            <a href="#" className="hover:text-white">
-              Privacy Policy
-            </a>
+          <div className="grid grid-cols-3 gap-3">
+            {[...Array(9)].map((_, i) => (
+              <div
+                key={i}
+                className="w-full h-20 bg-gray-800 rounded-md
+                hover:scale-105 transition"
+              />
+            ))}
           </div>
+        </div>
+      </div>
+
+      {/* BOTTOM BAR */}
+      <div className="border-t border-white/10 mt-16 pt-6">
+        <div className="max-w-7xl mx-auto px-6 text-center text-sm text-gray-500">
+          © {new Date().getFullYear()} Ravanan Packers & Movers. All rights reserved.
         </div>
       </div>
     </footer>

@@ -5,6 +5,7 @@ import {
   Building2,
   ArrowRight,
   Star,
+  Truck,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -43,20 +44,28 @@ const services = [
     image: work22,
   },
 ];
-
+ 
 export default function ServiceAlt() {
   const navigate = useNavigate();
 
   return (
-    <section className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-24 bg-white relative">
+
+      
+      
+    <div className=" bg-gradient-to-b z-10 from-yellow-100 from-5% to-white to-90%  absolute top-0  h-[300px] w-screen  text-white">
+
+    </div>
+
+      <div className="max-w-7xl mx-auto px-6 z-20 relative mt-10">
 
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5
-            rounded-full bg-primary/20 text-primary text-sm font-semibold">
+            rounded-full bg-primary text-white text-sm font-semibold">
             FAVOURITE CONSIGNMENT
-            <Star size={14} className="animate-spin" style={{ animationDuration: "6s" }} />
+             <Truck  size={16} />
+            {/* <Star size={14} className="animate-spin" style={{ animationDuration: "6s" }} /> */}
           </div>
 
           <h2 className="mt-4 text-4xl font-extrabold text-gray-900">
@@ -116,8 +125,23 @@ export default function ServiceAlt() {
         </div>
 
         {/* CTA */}
+
+
         <div className="flex justify-center mt-14">
-          <button
+              <button
+              
+            onClick={() => navigate("/services/bike")}
+            // onClick={() => navigate("/profile")}
+            className="inline-flex items-center gap-3
+              px-8 py-4 rounded-xl font-semibold
+              bg-gradient-to-b from-[#FFE6A3] via-[#FFC94A] to-[#F4A100]
+              text-black shadow-[0_6px_0_#C87F00]
+              hover:brightness-105 transition"
+          >
+     
+            See All Services <ArrowRight size={18} />
+          </button>
+          {/* <button
             onClick={() => navigate("/services/bike")}
             className="px-8 py-3 rounded-lg font-medium
               border border-primary text-primary
@@ -125,7 +149,7 @@ export default function ServiceAlt() {
               flex items-center gap-2"
           >
             See All Services <ArrowRight size={18} />
-          </button>
+          </button> */}
         </div>
 
       </div>

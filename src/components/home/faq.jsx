@@ -1,35 +1,31 @@
 import { useState } from 'react';
-import { ChevronDown, Star } from 'lucide-react';
-import parcel21 from '../../assets/parcel21.jpeg'
+import { Plus, Minus, Sparkles, MessageCircle, Clock, Shield, Zap } from 'lucide-react';
+import parcel21 from '../../assets/parcel21.jpeg';
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState(1);
+  const [openIndex, setOpenIndex] = useState(0);
 
   const faqs = [
     {
       question: "What payment methods do you accept?",
-      answer: "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for enterprise clients. All payments are processed securely through industry-standard encryption."
+      answer: "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for enterprise clients. All payments are processed securely through industry-standard encryption.",
+      icon: Shield
     },
     {
       question: "How long does shipping take?",
-      answer: "Standard shipping takes 5-7 business days. Express shipping (2-3 business days) and overnight shipping options are also available at checkout. International shipping times vary by location."
+      answer: "Standard shipping takes 5-7 business days. Express shipping (2-3 business days) and overnight shipping options are also available at checkout. International shipping times vary by location.",
+      icon: Zap
     },
     {
       question: "What is your return policy?",
-      answer: "We offer a 30-day money-back guarantee on all products. Items must be unused and in original packaging. Return shipping is free for defective items, and we'll process refunds within 5-7 business days of receiving your return."
+      answer: "We offer a 30-day money-back guarantee on all products. Items must be unused and in original packaging. Return shipping is free for defective items, and we'll process refunds within 5-7 business days of receiving your return.",
+      icon: Clock
     },
     {
       question: "Do you offer customer support?",
-      answer: "Yes! Our support team is available 24/7 via live chat, email, and phone. We typically respond to inquiries within 2 hours during business days and 4 hours on weekends."
-    },
-    // {
-    //   question: "Can I upgrade or downgrade my plan?",
-    //   answer: "Absolutely! You can change your plan at any time from your account settings. Upgrades take effect immediately, while downgrades will apply at the start of your next billing cycle. No cancellation fees."
-    // },
-    // {
-    //   question: "Is my data secure?",
-    //   answer: "Security is our top priority. We use bank-level 256-bit SSL encryption, regular security audits, and comply with GDPR, CCPA, and SOC 2 standards. Your data is never shared with third parties without explicit consent."
-    // }
+      answer: "Yes! Our support team is available 24/7 via live chat, email, and phone. We typically respond to inquiries within 2 hours during business days and 4 hours on weekends.",
+      icon: MessageCircle
+    }
   ];
 
   const toggleFAQ = (index) => {
@@ -37,132 +33,140 @@ export default function FAQSection() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-           <div className='border border-primary/50 px-3 mb-2 py-1.5 bg-primary/20 rounded-md inline-flex' >
-                        <p class="bg-gradient-to-r from-primary to-primary bg-clip-text text-transparent 
-                   uppercase tracking-[0.2em] font-semibold 
-                   drop-shadow-[0_0_10px_rgba(172,98,255,0.5)] text-sm   ">
-                              <span className="flex items-center gap-2" >
-                    
-                      <span>
-                     Frequently Asked Questions
-                      </span>
-                      <span className="animate-spin"  style={{ animationDuration: "5s" }} >
-                            <Star size={15} className="text-primary"  />
-                      </span>
-                    </span>
-                        </p>
-                    </div>
-            {/* <h2 className="h2 font-bold text-slate-900 mb-4">
-            
-            </h2> */}
-          <p className="h2 font-extrabold text-gray-900 w-full lg:w-[70%] text-center mx-auto mt-2">
-            Everything you need to know about our product and services
+
+    <section
+  className="relative py-24 px-4 overflow-hidden bg-center bg-cover"
+  style={{
+    backgroundImage:
+      "url('https://images.pexels.com/photos/35826069/pexels-photo-35826069.jpeg')",
+      backgroundPosition: 'top',
+      backgroundSize: 'cover',
+  }}
+>
+  {/* optional overlay */}
+  <div className="absolute inset-0 bg-black/40" />
+
+      {/* Simple Background Pattern */}
+      <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 2px 2px, #000 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative">
+        
+        {/* Compact Header */}
+        <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5
+            rounded-full bg-primary text-white text-sm font-semibold">
+            FAVOURITE CONSIGNMENT
+             <Sparkles  size={16} />
+            {/* <Star size={14} className="animate-spin" style={{ animationDuration: "6s" }} /> */}
+          </div>
+          {/* <div className="inline-flex items-center gap-2 mb-4">
+            <Sparkles className="w-5 h-5 text-yellow-500" />
+            <span className="text-sm font-medium text-gray-600 uppercase tracking-wider">FAQ</span>
+          </div> */}
+          <h2 className="text-5xl font-bold text-gray-900 mb-4">
+            Common Questions
+          </h2>
+          <p className="text-gray-600 text-lg max-w-xl mx-auto">
+            Quick answers to questions you may have
           </p>
         </div>
-        {/* FAQ Items */}
-<div className="relative bg-slate-50 py-6">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
-      {/* Image Section */}
-   <section className="relative z-0 overflow-visible">
-  <div className="relative">
+        {/* Single Column Layout */}
+        <div className="max-w-3xl mx-auto">
+          <div className="space-y-3">
+            {faqs.map((faq, index) => {
+              const Icon = faq.icon;
+              const isOpen = openIndex === index;
+              
+              return (
+                <div
+                  key={index}
+                  className={`relative overflow-hidden transition-all duration-300 ${
+                    isOpen 
+                      ? 'bg-gradient-to-r from-yellow-100 to-white shadow-md' 
+                      : 'bg-gray-50 hover:bg-gray-100'
+                  }`}
+                  style={{
+                    borderRadius: '16px',
+                    border: isOpen ? '2px solid #ffffff' : '2px solid transparent'
+                  }}
+                >
+                  {/* Question Button */}
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full flex items-center justify-between p-6 text-left group"
+                  >
+                    <div className="flex items-center gap-4 flex-1">
+                      {/* Icon */}
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                        isOpen 
+                          ? 'bg-yellow-500 shadow-lg' 
+                          : 'bg-white shadow-sm group-hover:shadow-md'
+                      }`}>
+                        <Icon className={`w-5 h-5 transition-colors ${
+                          isOpen ? 'text-white' : 'text-gray-700'
+                        }`} />
+                      </div>
 
-    {/* Decorative glow */}
-    <div className="absolute -top-6 -left-6 w-32 h-32 
-                    bg-primary/10 rounded-3xl 
-                    blur-2xl z-0 pointer-events-none" />
+                      {/* Question */}
+                      <span className={`text-xl font-semibold transition-colors ${
+                        isOpen ? 'text-yellow-900' : 'text-gray-900'
+                      }`}>
+                        {faq.question}
+                      </span>
+                    </div>
 
-    {/* Image */}
-    <img
-      src={parcel21}
-      alt="FAQ"
-      className="relative w-full rounded-3xl 
-                 shadow-[0_20px_50px_rgba(0,0,0,0.15)] 
-                 object-cover z-10"
-    />
+                    {/* Toggle Icon */}
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+                      isOpen 
+                        ? 'bg-yellow-500 rotate-180' 
+                        : 'bg-white group-hover:bg-gray-200'
+                    }`}>
+                      {isOpen ? (
+                        <Minus className="w-5 h-5 text-white" />
+                      ) : (
+                        <Plus className="w-5 h-5 text-gray-700" />
+                      )}
+                    </div>
+                  </button>
 
-  </div>
-</section>
+                  {/* Answer */}
+                  <div className={`transition-all duration-300 ease-in-out ${
+                    isOpen 
+                      ? 'max-h-48 opacity-100' 
+                      : 'max-h-0 opacity-0'
+                  }`}>
+                    <div className="px-6 pb-6 pl-[88px]">
+                      <p className="text-gray-700 leading-relaxed text-lg">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
 
-
-      {/* FAQ Section */}
-    <div className="space-y-6">
-  {faqs.map((faq, index) => (
-    <div
-      key={index}
-      className={`relative overflow-hidden rounded-2xl border transition-all duration-300
-        ${
-          openIndex === index
-            ? "border-primary shadow-xl"
-            : "border-slate-200 shadow-sm hover:shadow-lg"
-        } bg-white`}
-    >
-      {/* Left Accent Bar */}
-      <span
-        className={`absolute left-0 top-0 h-full w-1 transition-all duration-300
-          ${openIndex === index ? "bg-primary" : "bg-transparent"}`}
-      />
-
-      {/* Header */}
-      <button
-        onClick={() => toggleFAQ(index)}
-        className="w-full flex items-center gap-5 px-6 py-5 text-left"
-      >
-        {/* Icon Circle */}
-        <div
-          className={`flex items-center justify-center w-10 h-10 rounded-full text-sm font-bold
-            ${
-              openIndex === index
-                ? "bg-primary text-white"
-                : "bg-primary/10 text-primary"
-            } transition-colors`}
-        >
-          {index + 1}
+          {/* Bottom CTA */}
+          <div className="mt-12 text-center p-8 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-xl">
+            <h3 className="text-2xl font-bold text-white mb-3">
+              Need More Help?
+            </h3>
+            <p className="text-gray-300 mb-6 text-lg">
+              Our support team is ready to assist you anytime
+            </p>
+            <button className="px-8 py-4 bg-yellow-500 hover:bg-yellow-200 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+              Get in Touch
+            </button>
+          </div>
         </div>
 
-        {/* Question */}
-        <h3 className={`  ${
-              openIndex === index ? "text-yellow-800" : "text-slate-900"
-            } h6 transition-colors`}>
-          {faq.question}
-        </h3>
-
-        {/* Arrow */}
-        <ChevronDown
-          className={`w-5 h-5 transition-transform duration-300 text-primary
-            ${openIndex === index ? "rotate-180" : ""}`}
-        />
-      </button>
-
-      {/* Answer */}
-      <div
-        className={`transition-all duration-300 ease-in-out origin-top
-          ${
-            openIndex === index
-              ? "max-h-96 opacity-100 scale-y-100"
-              : "max-h-0 opacity-0 scale-y-95"
-          }`}
-      >
-        <div className="px-6 pb-6 pl-[4.75rem] text-slate-600 leading-relaxed h6">
-          {faq.answer}
-        </div>
       </div>
-    </div>
-  ))}
-</div>
-
-
-    </div>
-  </div>
-</div>
-
-   
-      </div>
-    </div>
+    </section>
   );
 }

@@ -109,7 +109,7 @@ useEffect(() => {
   return (
     <header  className=" z-50 isolate   ">
 
-   <div
+   {/* <div
   className={`fixed top-0 left-0 w-full z-50 isolate   transition-all duration-500
     ${showTopBar ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}
   `}
@@ -129,12 +129,12 @@ useEffect(() => {
     </div>
 
   </div>
-</div>
+</div> */}
 
     <div
   className={`hidden lg:block fixed w-full z-40 transition-all duration-500
-    ${showTopBar ? "top-10" : "top-0"}
-    backdrop-blur-sm bg-black/10
+    ${showTopBar ? "top-0" : "-top-0"}
+    backdrop-blur-sm bg-black
   `} 
 >
 
@@ -245,7 +245,7 @@ onClick={() =>navigate("/contact")}
             <div
   className={`block lg:hidden fixed w-full z-40 transition-all duration-500
     ${showTopBar ? "top-7" : "-top-10"}
-    backdrop-blur-sm bg-black/10
+    backdrop-blur-sm bg-black
   `}
 >
           <div className="flex items-center justify-between px-4 py-3  shadow-sm w-full mt-10 ">

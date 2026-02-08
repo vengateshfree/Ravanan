@@ -5,8 +5,12 @@ import parcel12 from "../../assets/parcel12.jpg";
 export default function CompanyIntroAlt() {
   const navigate = useNavigate();
 
-  return (
-    <section className="py-20 bg-gradient-to-br from-black from-[80%] via-black to-yellow-200  text-white">
+  return ( 
+    <section className="py-20 bg-gradient-to-b from-black  via-black to-black  text-black/20 relative">
+
+          <div className="absolute top-0 -right-40 w-[500px] h-[500px]  bg-[#FCDD5A]/70 opacity-15 blur-[160px] rounded-full animate-pulse" />
+      {/* <div className="absolute top-1/2 -right-40 w-[400px] h-[400px] bg-orange-400 opacity-10 blur-[140px] rounded-full animate-pulse delay-1000" /> */}
+      
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center">
 
         {/* CONTENT */}
@@ -17,7 +21,7 @@ export default function CompanyIntroAlt() {
             Ravanan Package & Movers
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-white">
             Reliable Moving Solutions <br />
             That Go The Extra Mile
           </h2>
@@ -43,7 +47,16 @@ export default function CompanyIntroAlt() {
           </div>
 
           {/* CTA */}
-          <button
+            <button
+            onClick={() => navigate("/services/bike")}
+            className="px-8 py-3 rounded-lg font-medium
+              border border-primary text-primary
+              hover:bg-primary hover:text-white transition
+              flex items-center gap-2"
+          >
+              Get a Free Quote <ArrowRight size={18} />
+          </button>
+          {/* <button
             onClick={() => navigate("/profile")}
             className="inline-flex items-center gap-3
               px-8 py-4 rounded-xl font-semibold
@@ -53,7 +66,7 @@ export default function CompanyIntroAlt() {
           >
             Get a Free Quote
             <ArrowRight />
-          </button>
+          </button> */}
         </div>
 
         {/* IMAGE */}

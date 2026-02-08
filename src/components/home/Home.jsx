@@ -11,16 +11,18 @@ import FAQSection from './faq'
 function Home() {
   return (
     <>
+    <div className='overflow-hidden' >
     
     <HeroCarousel />
     <CompanyIntro />
+    
         <Service />
     <OurProcess />
 
     <Testimonial />
     <FAQSection />
     
-
+</div>
     
     </>
   )
