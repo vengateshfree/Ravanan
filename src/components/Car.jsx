@@ -12,21 +12,21 @@ const slides = [
   {
     image: parcel9,
     title: "Reliable Logistics & Moving Solutions",
-    subtitle: "Fast, efficient delivery services tailored to your needs",
+    subtitle: "Lightning-fast, highly efficient delivery services designed to move what matters most—exactly when and how you need it",
     icon: Package,
     stats: { value: "50K+", label: "Deliveries" }
   },
   {
     image: parcel11,
     title: "Trusted Warehousing & Storage Services",
-    subtitle: "Professional storage solutions with 24/7 security monitoring",
+    subtitle: "Smart, secure, and professional storage solutions with 24/7 security monitoring—your belongings protected day and night",
     icon: Warehouse,
     stats: { value: "100K+", label: "sq ft Space" }
   },
   {
     image: parcel10,
     title: "Safe, Secure & Modern Storage Facilities",
-    subtitle: "State-of-the-art facilities with climate control technology",
+    subtitle: "World-class, state-of-the-art facilities featuring precision climate control technology to preserve and protect even the most sensitive items",
     icon: Shield,
     stats: { value: "99.9%", label: "Safety Rating" }
   },

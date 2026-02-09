@@ -7,6 +7,7 @@ import OurProcess from './OurProcess'
 import Service from './Service'
 import Testimonial from './Testimonial'
 import FAQSection from './faq'
+import About from './About'
 
 function Home() {
   return (
@@ -15,9 +16,12 @@ function Home() {
     
     <HeroCarousel />
     <CompanyIntro />
+   
+    
     
         <Service />
     <OurProcess />
+     <About />
 
     <Testimonial />
     <FAQSection />

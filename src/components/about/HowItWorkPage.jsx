@@ -8,23 +8,30 @@ import parcel10 from '../../assets/parcel10.jpg'
 function HowItWorkPage() {
   return (
     <div>
-                    <div
-  className="relative bg-cover bg-center h-[400px] flex  text-center items-center mt-10"
-  style={{
-     backgroundImage: `url(${parcel10})`,
- }}
->
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/60"></div>
-
-  {/* Content */}
-  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <h1 className="h1 font-bold text-white">
-   HOW It Works
-    </h1>
-  
-  </div>
-</div>
+      
+             <div
+                    className="relative bg-cover bg-center h-[450px] flex items-center"
+                    style={{
+                      backgroundImage: `url(${parcel10})`,
+                    }}
+                  >
+                    {/* Overlay with diagonal split */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-yellow-200/20"></div>
+                    
+                     {/* Yellow accent bar */}
+                    <div className="absolute bottom-0 left-0 right-0 h-2 bg-yellow-200"></div> 
+            
+                    {/* Content */}
+                    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                      <div className="border-l-8 border-yellow-200 pl-6">
+                        <h1 className="text-5xl md:text-7xl font-black text-white mb-4 tracking-tight">
+                          How It  <span className="text-yellow-200"> Works </span>
+                        </h1>
+                        <p className="text-xl text-white/90 font-light">Ready to move? We're ready to help.</p>
+                      </div>
+                    </div>
+                  </div>
+   
 
       
           <OurProcess />

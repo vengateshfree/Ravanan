@@ -38,7 +38,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navbar />} >
           <Route index element={<Home />} />
-          {/* <Route path="/branches" element={<Branches />} />
+          <Route path="/branches" element={<Branches />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/works" element={<OurWorks />} />
 
@@ -48,7 +48,7 @@ function App() {
             <Route path="/vision" element={<VisionPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/howitwork" element={<HowItWorkPage />} />
-          <Route path="/services" element={<ServicePage />}>
+          {/* <Route path="/services" element={<ServicePage />}>
 
             <Route path="car" element={<CarPage />} />
             <Route path="bike" element={<Bikepage />} />

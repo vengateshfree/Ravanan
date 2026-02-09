@@ -36,6 +36,7 @@ import work33 from "../../assets/work33.jpeg";
 import work34 from "../../assets/work34.jpeg";
 import work35 from "../../assets/work35.jpeg";
 import work36 from "../../assets/work36.jpeg";
+import { useNavigate } from 'react-router-dom';
 
 
 const OurWorks = () => {
@@ -98,8 +99,32 @@ const portfolioItems = [
     }
   };
 
+  const navigate = useNavigate();
+
   return (
-    <div className="min-h-screen bg-gray-50 ">
+    <div className="min-h-screen bg-black ">
+      <div
+              className="relative bg-cover bg-center h-[450px] flex items-center"
+              style={{
+                backgroundImage: `url(${parcel10})`,
+              }}
+            >
+              {/* Overlay with diagonal split */}
+              <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-yellow-200/20"></div>
+              
+               {/* Yellow accent bar */}
+              <div className="absolute bottom-0 left-0 right-0 h-2 bg-yellow-200"></div> 
+      
+              {/* Content */}
+              <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div className="border-l-8 border-yellow-200 pl-6">
+                  <h1 className="text-5xl md:text-7xl font-black text-white mb-4 tracking-tight">
+                    Our <span className="text-yellow-200">Works</span>
+                  </h1>
+                  <p className="text-xl text-white/90 font-light">Ready to move? We're ready to help.</p>
+                </div>
+              </div>
+            </div>
       <style>{`
         @keyframes fadeInUp {
           from {
@@ -118,88 +143,66 @@ const portfolioItems = [
       `}</style>
 
 
-      <div
+
+      {/* <div
         className="relative bg-cover bg-center h-[400px] flex  text-center items-center mt-10"
         style={{
       backgroundImage: `url(${parcel10})`,
         }}
       >
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
 
-        {/* Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <h1 className="h1 font-bold text-white">
-            Our Works          </h1>
+            Our Works    ss      </h1>
       
         </div>
-      </div>
+      </div> */}
       <div className="max-w-7xl mx-auto">
-        {/* <div className="text-center mb-12">
-          <p className="text-red-500 text-sm font-semibold tracking-wider uppercase mb-3">
-            01 _ GALLERY
-          </p>
-          <h1 className="text-5xl font-bold text-gray-900">
-            Our portfolio
-          </h1>
-        </div> */}
 
-        {/* Filter Buttons */}
-        {/* <div className="flex flex-wrap justify-center gap-3 mb-16 mt-10">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => handleFilterChange(filter)}
-              className={`px-6 py-3 rounded-md font-semibold text-sm transition-all duration-300 transform hover:scale-105 ${activeFilter === filter
-                  ? 'bg-red-500 text-white shadow-lg scale-105'
-                  : 'bg-gray-800 text-white hover:bg-gray-700'
-                }`}
-            >
-              {filter}
-            </button>
-          ))}
-        </div> */}
+
+        
+       <div className="text-center  mt-20">
+      <div className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-2 rounded-full text-sm font-semibold mb-4">
+      Good Works
+      </div>
+      <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+        Happy Moves Start With   <span className="text-yellow-400"> Us.</span>
+      </h1>
+    </div>
+     
+
 
         {/* Portfolio Grid */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 my-10 transition-all duration-300 ${isAnimating ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'
-          }`}>
-          {portfolioItems.map((item, index) => (
-            <div
-              key={item.id}
-              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Image Container */}
-              <div className="relative h-80 overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                />
-
-                {/* Discount Badge */}
-                {/* {item.discount && (
-                  <div className="absolute top-4 right-4 bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-sm shadow-lg">
-                    {item.discount}
-                  </div>
-                )} */}
-
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
-              </div>
-
-              {/* Title */}
-              {/* <div className="absolute bottom-0 left-0 right-0 p-6 bg-white">
-                <div className="flex items-center">
-                  <div className="w-8 h-0.5 bg-red-500 mr-3"></div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {item.title}
-                  </h3>
-                </div>
-              </div> */}
-            </div>
-          ))}
+    <div className={`grid grid-cols-1 md:grid-cols-2 bg-black lg:grid-cols-3 xl:grid-cols-4 gap-8 py-10 transition-all duration-300 ${isAnimating ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'}`}>
+  {portfolioItems.map((item, index) => (
+    <div
+      key={item.id}
+      className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
+      style={{ animationDelay: `${index * 100}ms` }}
+    >
+      {/* Image */}
+      <div className="relative h-80 overflow-hidden">
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-full h-full object-cover brightness-90 group-hover:brightness-100 transition-all duration-500"
+        />
+        
+        {/* Left Accent Bar */}
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-yellow-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+        
+        {/* Bottom Slide-in Title */}
+        <div onClick={() => navigate(`/services/bike`)} className="absolute cursor-pointer bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+          <h3 className="text-xl font-bold text-white">{item.title}</h3>
+          <p className="text-gray-300 text-sm mt-1">View Services →</p>
         </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+      <div className='h-2 bg-amber-200 w-screen mt-20' ></div>
       </div>
     </div>
   );

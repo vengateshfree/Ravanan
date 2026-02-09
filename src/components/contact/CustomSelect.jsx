@@ -28,26 +28,21 @@ export default function CustomSelect({
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
+              // className="w-full px-5 py-4 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 transition-colors"
+             
         className="
           w-full flex items-center justify-between
           px-4 py-3
-          border border-gray-300
-          rounded-xl
-          bg-white
-          text-gray-700
-          shadow-sm
-          hover:border-red-500
-          focus:outline-none focus:ring-2 focus:ring-red-500
-          transition
+         w-full px-5 py-4 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 transition-colors
         "
       >
-        <span className={formData[thisOne] ? "text-gray-800" : "text-gray-400"}>
+        <span className={formData[thisOne] ? "text-gray-800" : "text-gray-500"}>
           {/* {formData[thisOne] || "Select a service"} */}
           {thisOne == "service"  ? "Select a service" : "Select a location"}
         </span>
 
         <ChevronDown
-          className={`w-5 h-5 transition-transform ${
+          className={`w-5 h-5 transition-transform text-gray-500 ${
             open ? "rotate-180" : ""
           }`}
         />
@@ -57,7 +52,8 @@ export default function CustomSelect({
       {open && (
         <ul className="
           absolute z-50 mt-2 w-full
-          bg-white
+          bg-black
+          text-white
           border border-gray-200
           rounded-xl
           shadow-lg
@@ -73,8 +69,9 @@ export default function CustomSelect({
               className="
                 px-4 py-3
                 cursor-pointer
-                hover:bg-red-50 hover:text-red-600
+                 hover:text-yellow-400
                 transition
+                
               "
             >
               {service}
