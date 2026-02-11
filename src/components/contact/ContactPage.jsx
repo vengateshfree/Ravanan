@@ -65,6 +65,7 @@ export default function ContactPage() {
       backgroundImage: `url(${parcel10})`,
     }}
   >
+    
     {/* Overlay */}
     <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-yellow-200/20"></div>
 
