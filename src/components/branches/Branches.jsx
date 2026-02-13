@@ -235,7 +235,7 @@ export default function Branches() {
             <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
           </button>
           <button className="bg-white hover:bg-gray-100 text-black px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-white/50 border-2 border-white">
-            Call +91 96550 99911
+            Call +91 7358095325
           </button>
         </div>
       </div>
