@@ -68,7 +68,7 @@ export default function About() {
 
             <div className="mt-6 border-t border-gray-900/30 pt-4">
               <h4 className="font-bold text-gray-900 text-lg">
-                Arun Selvam
+                Vasanth
               </h4>
               <p className="text-sm text-gray-800">CEO & Founder</p>
             </div>

@@ -181,8 +181,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Call Us</p>
-                  <p className="text-white text-2xl font-bold">+91 96550 99911</p>
-                  <p className="text-gray-500 text-sm">Mon - Sat, 9AM - 6PM</p>
+                  <p className="text-white text-2xl font-bold">+91 7358095325 , +91 6379300624</p>
+                  <p className="text-gray-500 text-sm">Mon - Sun 24 Hrs</p>
                 </div>
               </div>
             </div>
@@ -194,7 +194,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Email Us</p>
-                  <p className="text-white text-lg font-semibold break-all">info@Ravananpackersandmovers.com</p>
+                  <p className="text-white text-lg font-semibold break-all">ravananpackersandmovers@gmail.com</p>
                   <p className="text-gray-500 text-sm">24/7 Support Available</p>
                 </div>
               </div>

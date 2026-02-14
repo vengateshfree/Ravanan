@@ -168,7 +168,7 @@ const Footer = () => {
           Salem (dk),Edappadi to kumarapalayam main road , Thevur , Kaveripatti (post) , 637104.
           </p>
             <p className="text-sm text-gray-300">
-              Phone: 6379300624, 7358095325, 6379300624
+              Phone: 6379300624, 7358095325
           </p>
             <p className="text-sm text-gray-300">
               Email: ravananpackersandmovers@gmail.com

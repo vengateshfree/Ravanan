@@ -62,9 +62,9 @@ useEffect(() => {
        child: [{
         name: "Bike Transport", path: "/services//bike",
       },
-      {
-        name: "Car Transport", path: "/services/car",
-      },
+      // {
+      //   name: "Car Transport", path: "/services/car",
+      // },
       {
         name: "Home Shifting", path: "/services/home",
       },

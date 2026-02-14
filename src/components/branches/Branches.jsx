@@ -15,7 +15,7 @@ export default function Branches() {
     {
       name: "Salem Branch Office",
       address: "salem (dk),edappadi to kumarapalayam main road , thevur , kaveripatti (post) , 637104",
-      phone: "+91 63793 00624: +91 7358095325 , +91 6379300624",
+      phone: "+91 63793 00624: +91 7358095325",
       email: " ravananpackersandmovers@gmail.com",
       mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.503136847761!2d77.69003497481532!3d11.443564788748704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba969d637234a55%3A0x228c570ede182c64!2sKaaliyamman%20Kovil%20Rd%2C%20Tamil%20Nadu%20638183!5e0!3m2!1sen!2sin!4v1770911921838!5m2!1sen!2sin",
       image: parcel9
@@ -235,7 +235,7 @@ export default function Branches() {
             <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
           </button>
           <button className="bg-white hover:bg-gray-100 text-black px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-white/50 border-2 border-white">
-            Call +91 96550 99911
+            Call +91 7358095325
           </button>
         </div>
       </div>
