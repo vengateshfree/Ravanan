@@ -67,8 +67,8 @@ const Footer = () => {
           <div className="w-10 h-[2px] bg-yellow-200 my-3"></div>
 
           <p className="text-sm text-gray-300">
-            Mon–Fri ........ 8:00 am – 06:00 pm <br />
-            Sat–Sun ........ 8:00 am – 12:00 pm
+            Mon–Fri ........ 24Hrs <br />
+            Sat–Sun ........ 24Hrs
           </p>
           
 
