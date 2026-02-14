@@ -131,7 +131,7 @@ export default function ServicePage() {
                   </div>
                   <div>
                     <div className="font-bold text-yellow-400 mb-1">Email Address</div>
-                    <div className="text-gray-400 text-sm break-all">info@Ravananpackersandmovers.com</div>
+                    <div className="text-gray-400 text-sm break-all">ravananpackersandmovers@gmail.com</div>
                   </div>
                 </div>
 
@@ -141,7 +141,7 @@ export default function ServicePage() {
                   </div>
                   <div>
                     <div className="font-bold text-yellow-400 mb-1">Phone Number</div>
-                    <div className="text-gray-400 text-sm">+91 96550 99933</div>
+                    <div className="text-gray-400 text-sm">+91 73580 95325</div>
                   </div>
                 </div>
 
@@ -152,7 +152,7 @@ export default function ServicePage() {
                   <div>
                     <div className="font-bold text-yellow-400 mb-1">Location</div>
                     <div className="text-gray-400 text-sm leading-relaxed">
-                      D/O Thangaraj, 44, Neelampayalam, Kollapanur, Gobichettipalayam, Getticheyur, Erode District, Tamil Nadu – 638110
+                      Salem (dk),Edappadi to kumarapalayam main road , Thevur , Kaveripatti (post) , 637104.
                     </div>
                   </div>
                 </div>
