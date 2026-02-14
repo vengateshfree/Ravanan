@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay, Pagination } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ArrowRight, Package, Warehouse, Shield } from "lucide-react";
+import { ArrowRight, Package, Warehouse, Shield, Phone } from "lucide-react";
 
 import parcel9 from "../assets/parc.jpg";
 import parcel10 from "../assets/warhouse.jpg";
@@ -107,7 +107,7 @@ export default function HeroCarousel() {
                     >
                       <slide.icon className="w-5 h-5 text-[#FCDD5A]" />
                       <span className="text-white text-sm font-medium">Premium Service</span>
-                      <span className="text-white text-sm font-medium">- 7358095325</span>
+                      {/* <span className="text-white text-sm font-medium">- 7358095325</span> */}
                     </div>
 
                     {/* Main Title */}
@@ -135,28 +135,30 @@ export default function HeroCarousel() {
                                   ${i === 0 && animateFirstSlide ? "animate-fade-in-up" : ""}`}
                       style={{ animationDelay: "0.8s" }}
                     >
-                      <button
-                        onClick={() => navigate("/contact")}
-                        className="group relative px-8 py-4 rounded-xl
-                                   bg-gradient-to-br from-[#FFE6A3] via-[#FFC94A] to-[#F4A100]
-                                   text-black font-bold text-lg
-                                   hover:shadow-[0_0_30px_rgba(252,221,90,0.5)]
-                                   hover:scale-105
-                                   active:scale-95
-                                   transition-all duration-300
-                                   overflow-hidden"
-                      >
-                        <span className="relative z-10 flex items-center justify-center gap-2">
-                          Get Started
-                          <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                        </span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
-                                        -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-                      </button>
+                   <button
+  onClick={() => window.location.href = "tel:7358095325"}
+  className="group relative px-8 py-4 rounded-xl cursor-pointer
+             bg-gradient-to-br from-[#FFE6A3] via-[#FFC94A] to-[#F4A100]
+             text-black font-bold text-lg
+             hover:shadow-[0_0_30px_rgba(252,221,90,0.5)]
+             hover:scale-105
+             active:scale-95
+             transition-all duration-300
+             overflow-hidden"
+>
+  <span className="relative z-10 flex items-center justify-center gap-2">
+    7358095325
+    <Phone className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+  </span>
+
+  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent 
+                  -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
+</button>
+
 
                       <button
-                        onClick={() => navigate("/services")}
-                        className="group px-8 py-4 rounded-xl
+                        onClick={() => navigate("/services/bike")}
+                        className="group px-8 py-4 rounded-xl cursor-pointer
                                    bg-white/10 backdrop-blur-md
                                    border-2 border-white/30
                                    text-white font-bold text-lg
