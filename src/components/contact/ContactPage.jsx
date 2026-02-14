@@ -208,7 +208,7 @@ export default function ContactPage() {
                 <div>
                   <p className="text-gray-400 text-sm mb-1">Visit Us</p>
                   <p className="text-white text-sm leading-relaxed">
-                    D/O Thangaraj, 44, Neelampayalam, Kollapanur, Gobichettipalayam, Tamil Nadu – 638110
+                    Salem (dk),Edappadi to kumarapalayam main road, Thevur, Kaveripatti (post), 637104.
                   </p>
                 </div>
               </div>
