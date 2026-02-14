@@ -194,11 +194,11 @@ export default function ServicePage() {
                 <div className="text-xl font-bold mb-3 text-white">Need Assistance?</div>
                 <div className="text-sm mb-2 flex items-center justify-center gap-2 text-yellow-400 font-semibold">
                   <Phone className="w-4 h-4" />
-                  <span>+91 96550 99933</span>
+                  <span>+91 73580 95325</span>
                 </div>
                 <div className="text-xs flex items-center justify-center gap-2 text-gray-400">
                   <Mail className="w-4 h-4" />
-                  <span>info@Ravananpackersandmovers.com</span>
+                  <span>ravananpackersandmovers@gmail.com</span>
                 </div>
               </div>
 
