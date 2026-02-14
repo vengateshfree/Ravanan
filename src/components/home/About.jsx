@@ -1,3 +1,6 @@
+import link10 from "../../assets/link10.jpeg";
+import link11 from "../../assets/link11.jpeg";
+
 export default function About() {
   return (
     <section className="bg-yellow-400 px-6 py-20">
@@ -9,7 +12,7 @@ export default function About() {
           {/* LEFT IMAGE */}
           <div className="rounded-2xl overflow-hidden">
             <img
-              src="https://images.pexels.com/photos/4246265/pexels-photo-4246265.jpeg"
+              src={link10}
               alt="Packing boxes"
               className="w-full h-full object-cover"
             />
@@ -77,9 +80,9 @@ export default function About() {
           {/* BOTTOM IMAGE */}
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <img
-              src="https://images.pexels.com/photos/4246266/pexels-photo-4246266.jpeg"
+              src={link11}
               alt="Household items"
-              className="w-full h-[240px] object-cover bg-center"
+              className="w-full h-[240px] object-top bg-center"
             />
           </div>
         </div>

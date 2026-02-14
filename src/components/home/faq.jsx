@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Plus, Minus, Sparkles, MessageCircle, Clock, Shield, Zap } from 'lucide-react';
 import parcel21 from '../../assets/parcel21.jpeg';
-
+import link12 from "../../assets/link12.jpeg";
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -38,7 +38,7 @@ export default function FAQSection() {
   className="relative py-24 px-4 overflow-hidden bg-center bg-cover"
   style={{
     backgroundImage:
-      "url('https://images.pexels.com/photos/35826069/pexels-photo-35826069.jpeg')",
+      `url(${link12})`,
       backgroundPosition: 'top',
       backgroundSize: 'cover',
   }}
@@ -71,7 +71,7 @@ export default function FAQSection() {
           <h2 className="text-5xl font-bold text-gray-900 mb-4">
             Common Questions
           </h2>
-          <p className="text-gray-600 text-lg max-w-xl mx-auto">
+          <p className="text-gray-200 text-lg max-w-xl mx-auto">
             Quick answers to questions you may have
           </p>
         </div>

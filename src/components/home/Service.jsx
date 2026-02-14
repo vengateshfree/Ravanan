@@ -13,6 +13,17 @@ import work16 from "../../assets/work16.jpeg";
 import parcel34 from "../../assets/parcel34.jpg";
 import work8 from "../../assets/work8.jpeg";
 import work22 from "../../assets/work22.jpeg";
+import link5 from "../../assets/link5.jpeg";
+import link6 from "../../assets/link6.jpeg";
+import link7 from "../../assets/link7.jpeg";
+import link8 from "../../assets/link8.jpeg";
+import link20 from "../../assets/link20.jpeg";
+
+
+
+
+
+
 
 const services = [
   {
@@ -20,28 +31,28 @@ const services = [
     desc: "Safe and reliable bike transportation across cities.",
     icon: Bike,
     url: "/services/bike",
-    image: work16,
+    image: link6,
   },
   {
     title: "Car Transportation",
     desc: "Door-to-door car transport with complete safety.",
     icon: Car,
     url: "/services/car",
-    image: parcel34,
+    image: link20,
   },
   {
     title: "Home Shifting",
     desc: "Professional and stress-free home shifting services.",
     icon: Home,
     url: "/services/home",
-    image: work8,
+    image: link8,
   },
   {
     title: "Office Shifting",
     desc: "Fast, secure office relocation with minimal downtime.",
     icon: Building2,
     url: "/services/office",
-    image: work22,
+    image: link7,
   },
 ];
  

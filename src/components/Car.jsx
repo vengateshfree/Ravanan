@@ -107,6 +107,7 @@ export default function HeroCarousel() {
                     >
                       <slide.icon className="w-5 h-5 text-[#FCDD5A]" />
                       <span className="text-white text-sm font-medium">Premium Service</span>
+                      <span className="text-white text-sm font-medium">- 7358095325</span>
                     </div>
 
                     {/* Main Title */}
