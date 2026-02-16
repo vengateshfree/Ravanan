@@ -2,8 +2,25 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
+import sitemap from 'vite-plugin-sitemap'
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),  tailwindcss()],
+  plugins: [react(), 
+     tailwindcss(),
+       sitemap({
+      hostname: 'https://ravanan-three.vercel.app/',
+      routes: [
+        '/',
+        '/about',
+        '/services',
+        '/contact',
+        '/bike-transport',
+        '/car-transport',
+        '/home-shifting',
+        '/office-shifting',
+      ]
+    })
+    
+    ],
 })
   
