@@ -2,16 +2,38 @@ import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Send, CheckCircle } from 'lucide-react';
 import CustomSelect from './CustomSelect';
 import parcel10 from '../../assets/titleimage.png';
+import { useHead } from '@unhead/react';
+import axios from 'axios';
  
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    service: '',
-    location: '',
-    message: ''
+
+   useHead({
+        title: 'Contact Us',
+      })
+
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   phone: '',
+  //   service: '',
+  //   location: '',
+  //   message: ''
+  // });
+
+ const [formData, setFormData] = useState({
+    domain: "https://ravanan-three.vercel.app/",
+    name: "",
+    phone: "",
+    service: "",
+    location: "",
+    message: "",
+    date: "",
   });
+
+  
+
+
+  console.log(formData, "form data")
 
   const [submitted, setSubmitted] = useState(false);
 
@@ -39,22 +61,62 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = () => {
-    if (formData.name && formData.phone && formData.service && formData.location && formData.message) {
-      console.log('Form submitted:', formData);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // ✅ Only phone required
+    if (!formData.phone) {
+      alert("Phone number is required");
+      return;
+    }
+
+    try {
+      const updatedData = {
+        ...formData,
+        my_domain: "https://ravanan-three.vercel.app/",
+        date: new Date().toLocaleString("en-IN", {
+          timeZone: "Asia/Kolkata",
+        }),
+      };
+
+
+      console.log("Submitting:", updatedData);
+
+      const response = await axios.post(
+        "https://n8n-z4cwcooc0g48ckkcsg4o4kg4.elgfoundation.in/webhook/6ea4ad2d-e4c1-4bd5-ae7c-f1405c976f3f",
+        updatedData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      console.log("Success:", response.data);
+
       setSubmitted(true);
+
+      // Reset form
+      setFormData({
+        domain: "https://ravanan-three.vercel.app/",
+        name: "",
+        phone: "",
+        service: "",
+        location: "",
+        message: "",
+        date: "",
+      });
+
       setTimeout(() => {
         setSubmitted(false);
-        setFormData({
-          name: '',
-          phone: '',
-          service: '',
-          location: '',
-          message: ''
-        });
       }, 3000);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong. Please try again.");
     }
   };
+
 
   return (
  <div className="min-h-screen bg-black mt-6 md:mt-10">
@@ -221,118 +283,75 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
-            <h3 className="text-3xl font-bold text-white mb-6">Send a Message</h3>
-                <div className="lg:col-span-2">
-            <div className=" rounded-2xl shadow-xl p-8">
+         <div className="bg-gray-800 rounded-2xl p-8 border border-gray-700">
+              <h3 className="text-3xl font-bold text-white mb-6">
+                Send a Message
+              </h3>
+
               {submitted ? (
-                <div className="text-center py-12">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Send className="w-8 h-8 text-green-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                  <p className="text-gray-600">Thank you for contacting us. We'll get back to you soon.</p>
+                <div className="text-center py-10 text-white">
+                  <p className="text-2xl font-bold text-green-400">
+                    Message Sent Successfully!
+                  </p>
                 </div>
               ) : (
-                <div>
+                <form onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Name */}
-                    <div>
-                     
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                       className="w-full px-5 py-4 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 transition-colors"
-             
-                        placeholder="Enter your name"
-                      />
-                    </div>
-
-                    {/* Phone */}
-                    <div>
-                 
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                             className="w-full px-5 py-4 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 transition-colors"
-             
-                        placeholder="+91 98765 43210"
-                      />
-                    </div>
-
-                    {/* Service */}
-                    <div>
-                      {/* <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                        Service Required *
-                      </label> */}
-
-                      <CustomSelect services={services} formData={formData} setFormData={setFormData} thisOne="service" />
-                        
-                    </div>
-
-                    {/* Location */}
-                    <div>
-                      {/* <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-2">
-                        Your Location *
-                      </label> */}
-                           <CustomSelect services={locations} formData={formData} setFormData={setFormData} thisOne="location" />
-                        
-                      {/* <select
-                        id="location"
-                        name="location"
-                        value={formData.location}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition bg-white"
-                      >
-                        <option value="">Select your location</option>
-                        {locations.map((location) => (
-                          <option key={location} value={location}>
-                            {location}
-                          </option>
-                        ))}
-                      </select> */}
-                    </div>
-                  </div>
-
-                  {/* Message */}
-                  <div className="mt-6">
-                    {/* <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Your Message *
-                    </label> */}
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
                       onChange={handleChange}
-                      rows="6"
-                         className="w-full px-5 py-4 bg-gray-900 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-colors"
-             
-                      placeholder="Tell us about your project or inquiry..."
-                    ></textarea>
+                      placeholder="Enter your name"
+                      className="w-full px-5 py-4 bg-gray-900 border border-gray-700 rounded-xl text-white"
+                    />
+
+                    {/* ✅ Phone Required */}
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="Enter your phone number *"
+                      required
+                      className="w-full px-5 py-4 bg-gray-900 border border-gray-700 rounded-xl text-white"
+                    />
+
+                    <CustomSelect
+                      services={services}
+                      formData={formData}
+                      setFormData={setFormData}
+                      thisOne="service"
+                    />
+
+                    <CustomSelect
+                      services={locations}
+                      formData={formData}
+                      setFormData={setFormData}
+                      thisOne="location"
+                    />
                   </div>
 
-                  {/* Submit Button */}
-                  <div className="mt-8">
-                      <button
-                      onClick={handleSubmit}
-                      className="w-full   bg-gradient-to-b from-[#FFE6A3] via-[#FFC94A] to-[#F4A100]
-         text-black  font-bold py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-lg shadow-cyan-500/25">
-                <span className="text-lg">Send Message</span>
-                <Send className="w-5 h-5" />
-              </button>
-                  </div>
-                </div>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows="5"
+                    placeholder="Your message"
+                    className="w-full mt-6 px-5 py-4 bg-gray-900 border border-gray-700 rounded-xl text-white"
+                  ></textarea>
+
+                  <button
+                    type="submit"
+                    className="w-full mt-8 bg-gradient-to-b from-[#FFE6A3] via-[#FFC94A] to-[#F4A100]
+                    text-black font-bold py-4 rounded-xl flex items-center justify-center gap-3 cursor-pointer "
+                  >
+                    Send Message
+                    <Send className="w-5 h-5" />
+                  </button>
+                </form>
               )}
             </div>
-          </div>
-           
-          </div>
         </div>
       </div>
     </div>
@@ -342,7 +361,7 @@ export default function ContactPage() {
       {/* Map Section */}
       <div className="border-t-8 border-yellow-200">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3904.328400615507!2d77.43712207588007!3d11.454195688748585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba93d8a0b1c8f0b%3A0x9c4b2c8b8a9d5f3f!2sGobichettipalayam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1766763614831!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.503136847761!2d77.69003497481532!3d11.443564788748704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba969d637234a55%3A0x228c570ede182c64!2sKaaliyamman%20Kovil%20Rd%2C%20Tamil%20Nadu%20638183!5e0!3m2!1sen!2sin!4v1770911921838!5m2!1sen!2sin"
           width="100%"
           height="400"
           style={{ border: 0 }}

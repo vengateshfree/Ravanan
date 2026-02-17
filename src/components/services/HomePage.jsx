@@ -4,8 +4,15 @@ import React, { useState } from "react";
 
 import parcel10 from '../../assets/homeshift.jpeg';
 import link8 from '../../assets/link8.jpeg';
+import { useHead } from "@unhead/react";
 
 function HomePage() {
+
+
+   useHead({
+        title: 'Home Shifting Service',
+      })
+
   const [openFaq, setOpenFaq] = useState(null);
 
   

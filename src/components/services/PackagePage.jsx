@@ -5,8 +5,13 @@ import React, { useState } from "react";
 import parcel13 from "../../assets/parcel13.jpg";
 
 import parcel10 from '../../assets/loadimage.jpeg';
+import { useHead } from "@unhead/react";
 
 function PackagePage() { 
+
+   useHead({
+      title: 'Packing & Moving Service',
+    })
   const [openFaq, setOpenFaq] = useState(null);
 
   const pageContent = {

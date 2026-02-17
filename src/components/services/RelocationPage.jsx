@@ -4,7 +4,13 @@ import React, { useState } from "react";
 
 
 import parcel10 from '../../assets/loadimage.jpeg';
+import { useHead } from "@unhead/react";
 function RelocationPage() {
+
+   useHead({
+        title: 'Relocation Service',
+      })
+
   const [openFaq, setOpenFaq] = useState(null);
 
 const pageContent = {

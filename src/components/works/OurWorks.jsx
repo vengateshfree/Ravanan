@@ -42,8 +42,15 @@ import link2 from "../../assets/link2.jpeg";
 import link3 from "../../assets/link3.jpeg";
 import link4 from "../../assets/link4.jpeg";
 import link5 from "../../assets/link5.jpeg";
+import { useHead } from '@unhead/react';
 
 const OurWorks = () => {
+
+
+   useHead({
+        title: 'Our Works',
+      })
+
   const [isAnimating] = useState(false);
   const navigate = useNavigate();
 

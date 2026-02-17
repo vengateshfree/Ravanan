@@ -3,8 +3,14 @@ import parcel10 from '../../assets/titleimage.png';
 import l1 from '../../assets/long1.jpg';
 import l2 from '../../assets/long2.jpg';
 import l3 from '../../assets/long3.jpg';
+import { useHead } from '@unhead/react';
 
 export default function CompanyBlog() {
+
+   useHead({
+      title: 'Company Blog',
+    })
+
   const blogPosts = [
     {
       id: 1,

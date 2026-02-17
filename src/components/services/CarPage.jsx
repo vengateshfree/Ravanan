@@ -4,11 +4,19 @@ import React, { useState } from "react";
 import { Clock, Minus, Plus, Shield, Star, Truck, UserCheck } from "lucide-react";
 
 import parcel9 from '../../assets/carshift.jpeg'
+import { useHead } from "@unhead/react";
 // import parcel10 from '../assets/parcel10.jpg'
 // import parcel11 from '../assets/parcel11.png'
 
 
 function CarPage() {
+
+  
+     useHead({
+      title: 'Car Service',
+    })
+  
+
   const [openFaq, setOpenFaq] = useState(null);
 
   // ===== PAGE CONTENT DATA =====

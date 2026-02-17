@@ -4,8 +4,19 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import parcel10 from '../../assets/titleimage.png';
 import parcel17 from "../../assets/parcel17.jpg";
 import parcel9 from '../../assets/parcel9.jpg'
+import { useHead } from '@unhead/react';
 
 export default function ServicePage() {
+
+  
+
+  
+
+
+   useHead({
+    title: 'Service',
+  })
+
   const [openFaq, setOpenFaq] = useState(null);
   const navigate = useNavigate();
 

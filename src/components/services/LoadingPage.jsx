@@ -3,7 +3,13 @@ import { Clock, Minus, Plus, Shield, Star, UserCheck, Wrench } from "lucide-reac
 import React, { useState } from "react";
 
 import parcel11 from "../../assets/parcel11.png";
+import { useHead } from "@unhead/react";
 function LoadingPage() {
+
+   useHead({
+        title: 'Loading & Unloading Service',
+      })
+
   const [openFaq, setOpenFaq] = useState(null);
 
 const pageContent = {

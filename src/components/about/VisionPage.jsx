@@ -3,8 +3,14 @@ import parcel10 from '../../assets/titleimage.png';
 import parcel3 from '../../assets/parcel25.jpg'
 import parcel5 from '../../assets/parcel23.jpg'
 import parcel7 from '../../assets/parcel33.jpg'
+import { useHead } from "@unhead/react";
 
 function VisionPage() {
+
+   useHead({
+        title: 'Vision & Mission',
+      })
+
   return (
     <div className="bg-gray-50">
 

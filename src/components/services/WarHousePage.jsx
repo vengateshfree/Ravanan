@@ -3,8 +3,13 @@ import { CalendarClock, Clock, Minus, Plus, Shield, Star, Warehouse } from "luci
 import React, { useState } from "react";
  
 import parcel11 from "../../assets/warimage.jpeg";
+import { useHead } from "@unhead/react";
 
 function WarHousePage() {
+
+   useHead({
+        title: 'Warehouse Service',
+      })
   const [openFaq, setOpenFaq] = useState(null);
 
 

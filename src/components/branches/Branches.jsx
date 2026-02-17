@@ -5,11 +5,18 @@ import parcel10 from '../../assets/titleimage.png';
 import parcel24 from '../../assets/parcel24.jpg';
 import parcel25 from '../../assets/parcel25.jpg';
 import { useNavigate } from 'react-router-dom';
+import { useHead } from '@unhead/react';
 
 export default function Branches() {
+
+  useHead({
+    title: 'branches',
+  })
+
+
   const navigate = useNavigate();
 
-  <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  // <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
   const branches = [
     {

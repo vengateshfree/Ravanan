@@ -6,7 +6,14 @@ import  link6 from "../../assets/link6.jpeg";
 
 import parcel9 from '../../assets/bikeshift.jpeg'
 import { useNavigate } from "react-router-dom"; 
+import { useHead } from "@unhead/react";
 function Bikepage() {
+
+   useHead({
+      title: 'Bike Service',
+    })
+
+
   const [openFaq, setOpenFaq] = useState(null);
 
   const navigate = useNavigate();

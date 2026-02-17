@@ -6,7 +6,14 @@ import parcel20 from "../../assets/parcel20.jpg";
 
 import parcel10 from '../../assets/offimage.jpeg';
 import link7 from '../../assets/link7.jpeg';
+import { useHead } from "@unhead/react";
 function OfficePage() {
+
+
+   useHead({
+      title: 'Office Shifting Service',
+    })
+
   const [openFaq, setOpenFaq] = useState(null);
 
 

@@ -8,8 +8,13 @@ import Service from './Service'
 import Testimonial from './Testimonial'
 import FAQSection from './faq'
 import About from './About'
+import { useHead } from '@unhead/react'
 
 function Home() {
+
+    useHead({
+    title: 'Home',
+  })
   return (
     <>
     <div className='overflow-hidden' >

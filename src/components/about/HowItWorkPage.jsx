@@ -4,8 +4,14 @@ import OurProcess from '../home/OurProcess'
 import Service from '../home/Service'
 import Testimonial from '../home/Testimonial'
 import parcel10 from '../../assets/titleimage.png';
+import { useHead } from '@unhead/react'
 
 function HowItWorkPage() {
+
+   useHead({
+        title: 'How It Works',
+      })
+
   return (
     <div>
       
